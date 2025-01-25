@@ -40,3 +40,4 @@ let &t_EI = "\e[2 q"   " cursor in normal mode
 let &t_SR = "\e[3 q"   " cursor in replace mode
 let &t_ti .= "\e[2 q"  " cursor when vim starts
 let &t_te .= "\e[3 q"  " cursor when vim exits
+set backspace=indent,eol,start  " more powerful backspacing
