@@ -1,4 +1,3 @@
-syntax enable
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -26,12 +25,17 @@ set encoding=UTF-8
 set background=dark
 nnoremap <Leader>cc :set colorcolumn=80<cr>
 
+call plug#begin()
+filetype indent off
+syntax off
+Plug 'stefanvanburen/rams.vim'
+call plug#end()
+
 set diffopt+=iwhite,vertical
 set fileformat=unix
 set statusline+=%#warningmsg#
 set statusline+=%*
-colorscheme industry
-filetype plugin indent on
+colorscheme rams
 autocmd BufRead *.md syn match markdownError "\w\@<=\w\@="
 highlight LineNr ctermfg=grey
 
